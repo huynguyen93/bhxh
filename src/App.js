@@ -1,6 +1,10 @@
 import React from 'react';
 import {months, years} from "./constants";
 
+const baseSalary = 149000000;
+const maximumInsurancePerMonth = baseSalary * 20;
+const salaryTypes = {contracted: 'contracted', insurance: 'insurance'};
+
 function getAdjustmentRate(year) {
   return 2;
 }
@@ -9,12 +13,14 @@ function getNumberOfYear({monthStart, yearStart, monthEnd, yearEnd}) {
   return 1;
 }
 
+function contractedSalaryToInsuranceSalary(contractedSalary) {
+  
+}
+
 function calculatePeriods(periods) {
   let totalMonthsBefore2014 = 0;
   let totalMonthsFrom2014 = 0;
   let adjustedSalary = 0;
-
-  console.log(periods);
 
   periods.forEach(period => {
     const monthStart = parseInt(period.monthStart);
@@ -22,38 +28,31 @@ function calculatePeriods(periods) {
     const monthEnd = parseInt(period.monthEnd);
     const yearEnd = parseInt(period.yearEnd);
     const salary = parseInt(period.salary);
+    const salaryType = period.salaryType;
+    const insuranceSalary = salaryType === salaryTypes.contracted
+      ? contractedSalaryToInsuranceSalary(salary)
+      : salary;
 
-    if (yearStart === yearEnd) {
-      const adjustment = getAdjustmentRate(yearStart);
-      const totalMonthsOfPeriod = monthEnd - monthStart + 1;
+    for (let year = yearStart; year <= yearEnd; year++) {
+      const adjustment = getAdjustmentRate(year);
+      let totalMonthsOfPeriod = 0;
 
-      adjustedSalary += (totalMonthsOfPeriod * salary * adjustment);
+      if (yearStart === yearEnd) {
+        totalMonthsOfPeriod = monthEnd - monthStart + 1;
+      } else if (year === yearStart) {
+        totalMonthsOfPeriod = 12 - monthStart + 1;
+      } else if (year === yearEnd) {
+        totalMonthsOfPeriod = monthEnd;
+      } else {
+        totalMonthsOfPeriod = 12;
+      }
+
+      adjustedSalary += (totalMonthsOfPeriod * insuranceSalary * adjustment);
 
       if (yearEnd < 2014) {
         totalMonthsBefore2014 += totalMonthsOfPeriod;
       } else {
         totalMonthsFrom2014 += totalMonthsOfPeriod;
-      }
-    } else {
-      for (let year = yearStart; year <= yearEnd; year++) {
-        const adjustment = getAdjustmentRate(year);
-        let totalMonthsOfPeriod = 0;
-
-        if (year === yearStart) {
-          totalMonthsOfPeriod = 12 - monthStart + 1;
-        } else if (year === yearEnd) {
-          totalMonthsOfPeriod = monthEnd;
-        } else {
-          totalMonthsOfPeriod = 12;
-        }
-
-        adjustedSalary += (totalMonthsOfPeriod * salary * adjustment);
-
-        if (yearEnd < 2014) {
-          totalMonthsBefore2014 += totalMonthsOfPeriod;
-        } else {
-          totalMonthsFrom2014 += totalMonthsOfPeriod;
-        }
       }
     }
   });
@@ -62,9 +61,6 @@ function calculatePeriods(periods) {
   const adjustedAverageSalary = adjustedSalary / totalMonths;
   const totalYearsBefore2014 = totalMonthsBefore2014 / 12;
   const totalYearsFrom2014 = totalMonthsFrom2014 / 12;
-
-  console.log('totalMonths', totalMonths);
-  console.log('adjustedAverageSalary', adjustedAverageSalary);
 
   return {
     result: (1.5 * adjustedAverageSalary * totalYearsBefore2014) + (2.5 * adjustedAverageSalary * totalYearsFrom2014)
