@@ -1,16 +1,21 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ModalSalary from "./components/ModalSalary";
-import {months, salaryTypes, years} from "./constants";
+import {maximumInsurancePerMonth, minimumSalaryByZone, months, salaryTypes, years, zones} from "./constants";
 import utils from "./utils";
 
+const defaultPeriod = {
+  salary: '',
+  zone: zones.zone1,
+};
+
 function App() {
-  const [periods, setPeriods] = React.useState([{salary: ''}]);
+  const [periods, setPeriods] = React.useState([{...defaultPeriod}]);
   const [result, setResult] = React.useState(null);
   const [showModalSalary, setShowModalSalary] = React.useState(false);
 
   const addPeriod = () => {
-    setPeriods([...periods, {salary: ''}]);
+    setPeriods([...periods, {...defaultPeriod}]);
   };
 
   const removePeriod = (index) => {
@@ -24,7 +29,6 @@ function App() {
 
     periods.forEach((period) => {
       const errorMessage = utils.validatePeriod(period);
-      console.log(errorMessage);
 
       if (errorMessage) hasError = true;
 
@@ -56,11 +60,19 @@ function App() {
       return;
     }
 
-    const integer = parseInt(salary.replace(/[^0-9]/g, '') || 0);
-    const localeString = integer.toLocaleString('en');
+    const salaryInInteger = parseInt(salary.replace(/[^0-9]/g, '') || 0);
+    const localeString = salaryInInteger.toLocaleString('en');
     const formattedSalary = localeString.replace(/,/g, ' ');
 
-    updatePeriod(periodIndex, {salary: formattedSalary});
+    const period = periods[periodIndex];
+    const zone = period.zone;
+    let amountPaidForInsurance = null;
+
+    if (salaryInInteger >= minimumSalaryByZone[zone] && salaryInInteger <= maximumInsurancePerMonth) {
+      amountPaidForInsurance = utils.calculateAmountPaid(salaryInInteger);
+    }
+
+    updatePeriod(periodIndex, {salary: formattedSalary, amountPaidForInsurance});
   };
 
   return (
@@ -68,7 +80,15 @@ function App() {
       <h1>BHXH</h1>
       <hr/>
       {periods.map((period, index) => {
-        const {salary, monthStart, monthEnd, yearStart, yearEnd, errorMessage} = period;
+        const {
+          salary,
+          monthStart,
+          monthEnd,
+          yearStart,
+          yearEnd,
+          errorMessage,
+          amountPaidForInsurance,
+        } = period;
         let isValidTimeRange = true;
         if (monthStart && monthEnd && yearStart && yearEnd) {
           if (yearEnd < yearStart || (yearEnd === yearStart && monthEnd < monthStart)) {
@@ -158,6 +178,16 @@ function App() {
                       *Giải thích
                     </button>
                   </div>
+                  {amountPaidForInsurance && (
+                    <div>
+                      Số tiền đóng BHXH:
+                      <ul>
+                        <li>Công ty đóng: {utils.formatNumber(amountPaidForInsurance.byCompany)}</li>
+                        <li>Người lao động đóng: {utils.formatNumber(amountPaidForInsurance.byWorker)}</li>
+                        <li>Tổng cộng: <strong>{utils.formatNumber(amountPaidForInsurance.total)}đ / tháng</strong></li>
+                      </ul>
+                    </div>
+                  )}
                   {!isValidTimeRange && (
                     <div>
                       <span className="text-danger">Thời gian không phù hợp, vui lòng chọn lại!</span>

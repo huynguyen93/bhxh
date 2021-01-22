@@ -1,4 +1,4 @@
-import {salaryTypes} from "./constants";
+import {percentageCompanyPays, percentageWorkerPays, salaryTypes} from "./constants";
 
 function calculatePeriods(periods) {
   let totalMonthsBefore2014 = 0;
@@ -73,7 +73,24 @@ function contractedSalaryToInsuranceSalary(contractedSalary) {
 
 }
 
+function calculateAmountPaid(insuranceSalary) {
+  const byCompany = insuranceSalary * percentageCompanyPays / 100;
+  const byWorker = insuranceSalary * percentageWorkerPays / 100;
+
+  return {
+    byCompany,
+    byWorker,
+    total: byCompany + byWorker,
+  };
+}
+
+function formatNumber(number) {
+  return Math.round(number).toLocaleString('en');
+}
+
 export default {
   calculatePeriods,
   validatePeriod,
+  calculateAmountPaid,
+  formatNumber,
 };
