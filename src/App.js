@@ -1,7 +1,15 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ModalSalary from "./components/ModalSalary";
-import {maximumInsurancePerMonth, minimumSalaryByZone, months, salaryTypes, years, zones} from "./constants";
+import {
+  maximumInsurancePerMonth,
+  minimumSalaryByZone,
+  months, percentageCompanyPays, percentageWorkerPays,
+  salaryTypes,
+  years,
+  zoneLabels,
+  zones
+} from "./constants";
 import utils from "./utils";
 
 const defaultPeriod = {
@@ -47,7 +55,11 @@ function App() {
 
   const updatePeriod = (periodIndex, data) => {
     const updatedPeriods = [...periods];
-    updatedPeriods[periodIndex] = {...periods[periodIndex], ...data};
+    updatedPeriods[periodIndex] = {
+      ...periods[periodIndex],
+      ...data,
+      errorMessage: '',
+    };
 
     setPeriods([
       ...updatedPeriods,
@@ -151,9 +163,9 @@ function App() {
                     </select>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">Mức lương</label>
+                    <label htmlFor="inputSalary">Mức lương</label>
                     <select
-                      id="inputState"
+                      id="inputSalary"
                       className="mx-2"
                       onChange={(e) => updatePeriod(index, {yearStart: e.target.value})}
                     >
@@ -178,12 +190,30 @@ function App() {
                       *Giải thích
                     </button>
                   </div>
+                  <div>
+                    Vùng
+                    {' '}
+                    {Object.keys(zoneLabels).map((zoneCode) => {
+                      return (
+                        <div className="form-check form-check-inline mx-3" key={zoneCode}>
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="zone"
+                            id="zone1"
+                            value={zoneCode}
+                          />
+                          <label className="form-check-label" htmlFor="inlineRadio1">{zoneLabels[zoneCode]}</label>
+                        </div>
+                      )
+                    })}
+                  </div>
                   {amountPaidForInsurance && (
-                    <div>
+                    <div className="mt-3">
                       Số tiền đóng BHXH:
                       <ul>
-                        <li>Công ty đóng: {utils.formatNumber(amountPaidForInsurance.byCompany)}</li>
-                        <li>Người lao động đóng: {utils.formatNumber(amountPaidForInsurance.byWorker)}</li>
+                        <li>Công ty đóng ({percentageCompanyPays}%): {utils.formatNumber(amountPaidForInsurance.byCompany)}</li>
+                        <li>Người lao động đóng ({percentageWorkerPays}%): {utils.formatNumber(amountPaidForInsurance.byWorker)}</li>
                         <li>Tổng cộng: <strong>{utils.formatNumber(amountPaidForInsurance.total)}đ / tháng</strong></li>
                       </ul>
                     </div>

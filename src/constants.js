@@ -14,6 +14,12 @@ for (let year = currentYear; year > oldestYear; year--) {
 }
 
 export const zones = {zone1: 'zone1', zone2: 'zone2', zone3: 'zone3', zone4: 'zone4'};
+export const zoneLabels = {
+  [zones.zone1]: 'I',
+  [zones.zone2]: 'II',
+  [zones.zone3]: 'III',
+  [zones.zone4]: 'IV',
+};
 export const baseSalary = 1.49 * million;
 export const maximumInsurancePerMonth = baseSalary * 20;
 export const minimumSalaryByZone = {
