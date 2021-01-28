@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ModalSalary from "./components/ModalSalary";
+import ModalZones from './components/ModalZones';
 import {
   maximumInsurancePerMonth,
   minimumSalaryByZone,
@@ -21,6 +22,7 @@ function App() {
   const [periods, setPeriods] = React.useState([{...defaultPeriod}]);
   const [result, setResult] = React.useState(null);
   const [showModalSalary, setShowModalSalary] = React.useState(false);
+  const [showModalZone, setShowModalZone] = React.useState(false);
 
   const addPeriod = () => {
     setPeriods([...periods, {...defaultPeriod}]);
@@ -194,19 +196,27 @@ function App() {
                     Vùng
                     {' '}
                     {Object.keys(zoneLabels).map((zoneCode) => {
+                      const id = 'radio' + zoneCode;
                       return (
                         <div className="form-check form-check-inline mx-3" key={zoneCode}>
                           <input
                             className="form-check-input"
                             type="radio"
                             name="zone"
-                            id="zone1"
+                            id={id}
                             value={zoneCode}
                           />
-                          <label className="form-check-label" htmlFor="inlineRadio1">{zoneLabels[zoneCode]}</label>
+                          <label className="form-check-label" htmlFor={id}>{zoneLabels[zoneCode]}</label>
                         </div>
                       )
                     })}
+                    <button
+                      className="btn btn-sm btn-link mx-1"
+                      onClick={() => setShowModalZone(true)}
+                      disabled={showModalZone}
+                    >
+                      *Giải thích
+                    </button>
                   </div>
                   {amountPaidForInsurance && (
                     <div className="mt-3">
@@ -255,6 +265,7 @@ function App() {
         </div>
       )}
       <ModalSalary show={showModalSalary} setShow={setShowModalSalary}/>
+      <ModalZones show={showModalZone} setShow={setShowModalZone} />
     </div>
   );
 }

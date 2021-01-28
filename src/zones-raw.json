@@ -1,0 +1,1010 @@
+[
+  {
+    "FIELD1": "01",
+    "FIELD2": "Hà Nội",
+    "FIELD3": "Ba Đình, Bắc Từ Liêm, Cầu Giấy, Đống Đa, Hà Đông, Hai Bà Trưng, Hoàn Kiếm, Hoàng Mai, Long Biên, Nam Từ Liêm, Tây Hồ, Thanh Xuân, Gia Lâm, Đông Anh, Sóc Sơn, Thanh Trì, Thường Tín, Hoài Đức, Thạch Thất, Quốc Oai, Thanh Oai, Mê Linh, Chương Mỹ, Sơn Tây",
+    "FIELD4": "I",
+    "FIELD5": "4.420.000"
+  },
+  {
+    "FIELD1": "Ba Vì, Đan Phượng, Phú Xuyên, Phúc Thọ, Ứng Hòa, Mỹ Đức",
+    "FIELD2": "II",
+    "FIELD3": "3.920.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "02",
+    "FIELD2": "Hải Phòng",
+    "FIELD3": "Dương Kinh, Hồng Bàng, Hải An, Đồ Sơn, Ngô Quyền, Lê Chân, Kiến An, Thủy Nguyên, An Dương, An Lão, Vĩnh Bảo, Tiên Lãng, Cát Hải, Kiến Thụy",
+    "FIELD4": "I",
+    "FIELD5": "4.420.000"
+  },
+  {
+    "FIELD1": "Bạch Long Vĩ",
+    "FIELD2": "II",
+    "FIELD3": "3.920.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "03",
+    "FIELD2": "Hồ Chí Minh",
+    "FIELD3": "Quận 1, Quận 2, Quận 3, Quận 4, Quận 5, Quận 6, Quận 7, Quận 8, Quận 9, Quận 10, Quận 11, Quận 12, Bình Thạnh, Tân Phú, Tân Bình, Bình Tân, Phú Nhuận, Gò Vấp, Thủ Đức, Củ Chi, Hóc Môn, Bình Chánh, Nhà Bè",
+    "FIELD4": "I",
+    "FIELD5": "4.420.000"
+  },
+  {
+    "FIELD1": "Cần Giờ",
+    "FIELD2": "II",
+    "FIELD3": "3.920.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "04",
+    "FIELD2": "Đồng Nai",
+    "FIELD3": "Thành phố: Biên Hòa, Long Khánh, Nhơn Trạch, Long Thành, Vĩnh Cửu, Trảng Bom",
+    "FIELD4": "I",
+    "FIELD5": "4.420.000"
+  },
+  {
+    "FIELD1": "Định Quán, Xuân Lộc, Thống Nhất",
+    "FIELD2": "II",
+    "FIELD3": "3.920.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Cẩm Mỹ, Tân Phú",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "05",
+    "FIELD2": "Bình Dương",
+    "FIELD3": "Thành phố Thủ Dầu Một, Thuận An, Dĩ An, Bến Cát, Tân Uyên, Bàu Bàng, Bắc Tân Uyên, Dầu Tiếng, Phú Giáo",
+    "FIELD4": "I",
+    "FIELD5": "4.420.000"
+  },
+  {
+    "FIELD1": "06",
+    "FIELD2": "Bà Rịa - Vũng Tàu",
+    "FIELD3": "Thành phố Vũng Tàu, Phú Mỹ",
+    "FIELD4": "I",
+    "FIELD5": "4.420.000"
+  },
+  {
+    "FIELD1": "Thành phố Bà Rịa",
+    "FIELD2": "II",
+    "FIELD3": "3.920.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Long Điền, Đất Đỏ, Xuyên Mộc, Châu Đức, Côn Đảo",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "07",
+    "FIELD2": "Hải Dương",
+    "FIELD3": "Thành phố Hải Dương",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Chí Linh, Cẩm Giàng, Nam Sách, Kim Thành, Kinh Môn, Gia Lộc, Bình Giang, Tứ Kỳ",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Thanh Hà, Thanh Miện, Ninh Giang",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "08",
+    "FIELD2": "Hưng Yên",
+    "FIELD3": "Thành phố Hưng Yên, Mỹ Hào, Văn Lâm, Văn Giang, Yên Mỹ",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Ân Thi, Khoái Châu, Kim Động, Phù Cừ, Tiên Lữ",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "09",
+    "FIELD2": "Vĩnh Phúc",
+    "FIELD3": "Thành phố: Vĩnh Yên, Phúc Yên, Bình Xuyên, Yên Lạc",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Vĩnh Tường, Tam Đảo, Tam Dương, Lập Thạch, Sông Lô",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "10",
+    "FIELD2": "Bắc Ninh",
+    "FIELD3": "Thành phố Bắc Ninh, Từ Sơn, Quế Võ, Tiên Du, Yên Phong, Thuận Thành, Gia Bình, Lương Tài",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "11",
+    "FIELD2": "Quảng Ninh",
+    "FIELD3": "Thành phố: Hạ Long, Cẩm Phả, Uông Bí, Móng Cái",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Quảng Yên, Đông Triều, Huyện Hoành Bồ",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Vân Đồn, Đầm Hà, Cô Tô, Tiên Yên, Hải Hà, Bình Liêu, Ba Chẽ",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "12",
+    "FIELD2": "Thái Nguyên",
+    "FIELD3": "Thành phố: Thái Nguyên, Sông Công, Phổ Yên",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Phú Bình, Phú Lương, Đồng Hỷ, Đại Từ",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Định Hóa, Võ Nhai",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "13",
+    "FIELD2": "Phú Thọ",
+    "FIELD3": "Thành phố Việt Trì",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Phú Thọ, Phù Ninh, Lâm Thao, Thanh Ba, Tam Nông",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Cẩm Khê, Đoan Hùng, Hạ Hòa, Tân Sơn, Thanh Sơn, Thanh Thủy, Yên Lập",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "14",
+    "FIELD2": "Lào Cai",
+    "FIELD3": "Thành phố Lào Cai",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Bảo Thắng, Sa Pa",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Bảo Yên, Bát Xát, Bắc Hà, Mường Khương, Si Ma Cai, Văn Bàn",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "15",
+    "FIELD2": "Nam Định",
+    "FIELD3": "Thành phố Nam Định, Huyện Mỹ Lộc",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Giao Thủy, Hải Hậu, Nam Trực, Nghĩa Hưng, Trực Ninh, Vụ Bản, Xuân Trường, Ý Yên",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "16",
+    "FIELD2": "Ninh Bình",
+    "FIELD3": "Thành phố Ninh Bình",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Thành phố Tam Điệp, Gia Viễn, Yên Khánh, Hoa Lư",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Nho Quan, Kim Sơn, Yên Mô",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "17",
+    "FIELD2": "Thừa Thiên Huế",
+    "FIELD3": "Thành phố Huế",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Hương Thủy, Hương Trà, Phú Lộc, Phong Điền, Quảng Điền, Phú Vang",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "A Lưới, Nam Đông",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "18",
+    "FIELD2": "Quảng Nam",
+    "FIELD3": "Thành phố Hội An, Tam kỳ",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Điện Bàn, Đại Lộc, Duy Xuyên, Núi Thành, Quế Sơn, Phú Ninh, Thăng Bình",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Bắc Trà My, Nam Trà My, Phước Sơn, Tiên Phước, Hiệp Đức, Nông Sơn, Đông Giang, Nam Giang, Tây Giang",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "19",
+    "FIELD2": "Đà Nẵng",
+    "FIELD3": "Hải Châu, Sơn Trà, Ngũ Hành Sơn, Thanh Khê, Liên Chiểu, Cẩm Lệ, Hòa Vang, huyện đảo Hoàng Sa",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "20",
+    "FIELD2": "Khánh Hòa",
+    "FIELD3": "Thành phố: Nha Trang, Cam Ranh",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Ninh Hòa, Cam Lâm, Diên Khánh, Vạn Ninh",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Khánh Vinh, Khánh Sơn, huyện đảo Trường Sa",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "21",
+    "FIELD2": "Lâm Đồng",
+    "FIELD3": "Thành phố: Đà Lạt, Bảo Lộc",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Đức Trọng, Di Linh",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Lạc Dương, Đơn Dương, Lâm Hà, Bảo Lâm, Đạ Huoai, Đạ Tẻh, Cát Tiên, Đam Rông",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "22",
+    "FIELD2": "Bình Thuận",
+    "FIELD3": "Thành phố Phan Thiết",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "La Gi, Hàm Thuận Bắc, Hàm Thuận Nam",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Đức Linh, Tánh Linh, Tuy Phong, Phú Quý, Hàm Tân, Bắc Bình",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "23",
+    "FIELD2": "Tây Ninh",
+    "FIELD3": "Thành phố Tây Ninh, Trảng Bàng, Gò Dầu",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Tân Biên, Tân Châu, Dương Minh Châu, Châu Thành, Hòa Thành, Bến Cầu",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "24",
+    "FIELD2": "Bình Phước",
+    "FIELD3": "Thành phố Đồng Xoài, Chơn Thành, Đồng Phú",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Phước Long, Bình Long, Hớn Quản, Lộc Ninh, Phú Riềng",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Bù Đăng, Bù Đốp, Bù Gia Mập",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "25",
+    "FIELD2": "Long An",
+    "FIELD3": "Thành phố Tân An, Đức Hòa, Bến Lức, Thủ Thừa, Cần Đước, Cần Giuộc",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Kiến Tường, Đức Huệ, Châu Thành, Tân Trụ, Thạnh Hóa",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Vĩnh Hưng, Mộc Hóa, Tân Thạnh, Tân Hưng",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "26",
+    "FIELD2": "Tiền Giang",
+    "FIELD3": "Thành phố Mỹ Tho, Huyện Châu Thành",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Gò Công, Cai Lậy, Chợ Gạo, Tân Phước",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Cái Bè, Cai Lậy, Gò Công Tây, Gò Công Đông, Tân Phú Đông",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "27",
+    "FIELD2": "Cần Thơ",
+    "FIELD3": "Ninh Kiều, Bình Thủy, Cái Răng, Ô Môn, Thốt Nốt",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Phong Điền, Cờ Đỏ, Thớt Lai, Vĩnh Thạnh",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "28",
+    "FIELD2": "Kiên Giang",
+    "FIELD3": "Thành phố: Rạch Giá, Hà Tiên, Huyện Phú Quốc",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Kiên Lương, Kiên Hải, Châu Thành",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "An Biên, An Minh, Giồng Riềng, Gò Quao, Hòn Đất, U Minh Thượng, Tân Hiệp, Vĩnh Thuận, Giang Thành",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "29",
+    "FIELD2": "An Giang",
+    "FIELD3": "Thành phố: Long Xuyên, Châu Đốc",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Tân Châu, Châu Phú, Châu Thành, Thoại Sơn",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Phú Tân, Tri Tôn, Tịnh Biên, Chợ Mới, An Phú",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "30",
+    "FIELD2": "Trà Vinh",
+    "FIELD3": "Thành phố Trà Vinh",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Duyên Hải",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Châu Thành, Cầu Ngang, Duyên Hải, Trà Cú, Tiểu Cần, Cầu Kè, Càng Long",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "31",
+    "FIELD2": "Cà Mau",
+    "FIELD3": "Thành phố Cà Mau",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Năm Căn, Cái Nước, U Minh, Trần Văn Thời",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Đầm Dơi, Ngọc Hiển, Thới Bình, Phú Tân",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "32",
+    "FIELD2": "Bến Tre",
+    "FIELD3": "Thành phố Bến Tre, Huyện Châu Thành",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Ba Tri, Bình Đại, Mỏ Cày Nam",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Chợ Lách, Giồng Trôm, Mỏ Cày Bắc, Thạnh Phú",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "33",
+    "FIELD2": "Bắc Giang",
+    "FIELD3": "Thành phố Bắc Giang, Việt Yên, Yên Dũng, Hiệp Hòa, Tân Yên, Lạng Giang",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Yên Thế, Lục Ngạn, Sơn Động, Lục Nam",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "34",
+    "FIELD2": "Hà Nam",
+    "FIELD3": "Thành phố Phủ Lý, Duy Tiên, Kim Bảng",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Lý Nhân, Bình Lục, Thanh Liêm",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "35",
+    "FIELD2": "Hòa Bình",
+    "FIELD3": "Thành phố Hòa Bình, Huyện Lương Sơn",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Cao Phong, Kỳ Sơn, Kim Bôi, Lạc Sơn, Lạc Thủy, Mai Châu, Tân Lạc, Yên Thủy, Đà Bắc",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "36",
+    "FIELD2": "Thanh Hóa",
+    "FIELD3": "Thành phố: Thanh Hóa, Sầm Sơn, Bỉm Sơn, Tĩnh Gia, Đông Sơn, Quảng Xương",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Bá Thước, Cẩm Thủy, Hà Trung, Hậu Lộc, Hoằng Hóa, Lang Chánh, Mường Lát, Nga Sơn, Ngọc Lặc, Như Thanh, Như Xuân, Nông Cống, Quan Hóa, Quan Sơn, Thạch Thành, Thiệu Hóa, Thọ Xuân, Thường Xuân, Triệu Sơn, Vĩnh Lộc, Yên Định",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "37",
+    "FIELD2": "Hà Tĩnh",
+    "FIELD3": "Thành phố Hà Tĩnh, Kỳ Anh",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Hồng Lĩnh, Cẩm Xuyên, Can Lộc, Đức Thọ, Hương Khê, Hương Sơn, Kỳ Anh, Nghi Xuân, Thạch Hà, Vũ Quang, Lộc Hà",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "38",
+    "FIELD2": "Phú Yên",
+    "FIELD3": "Thành phố Tuy Hòa, Sông Cầu, Huyện Đông Hòa",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Phú Hòa, Tuy An, Sông Hinh, Đồng Xuân, Tây Hòa, Sơn Hòa",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "39",
+    "FIELD2": "Ninh Thuận",
+    "FIELD3": "Thành phố Phan Rang - Tháp Chàm, Ninh Hải, Thuận Bắc",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Bác Ái, Ninh Phước, Ninh Sơn, Thuận Nam",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "40",
+    "FIELD2": "Kon Tum",
+    "FIELD3": "Thành Phố Kom Tum, Huyện Đăk Hà",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Đăk Tô, Đăk Glei, La H'Drai, Kon Plông, Kon Rẫy, Ngọc Hồi, Sa Thầy, Tu Mơ Rông",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "41",
+    "FIELD2": "Vĩnh Long",
+    "FIELD3": "Thành phố Vĩnh Long, Bình Minh, Huyện Long Hồ",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Bình Tân, Mang Thít, Tam Bình, Trà Ôn, Vũng Liêm",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "42",
+    "FIELD2": "Hậu Giang",
+    "FIELD3": "Thành phố Vị Thanh, Ngã Bảy, Châu Thành, Châu Thành A",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Long Mỹ, Vị Thủy, Long Mỹ, Phụng Hiệp",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "43",
+    "FIELD2": "Bạc Liêu",
+    "FIELD3": "Thành Phố Bạc Liêu, Giá Rai",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Hồng Dân, Hòa Bình, Phước Long, Vĩnh Lợi, Đông Hải",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "44",
+    "FIELD2": "Sóc Trăng",
+    "FIELD3": "Thành phố Sóc Trăng, Vĩnh Châu, Ngã Năm",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Mỹ Tú, Long Phú, Thạnh Trị, Mỹ Xuyên, Châu Thành, Trần Đề, Kế Sách, Cù Lao Dung",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "45",
+    "FIELD2": "Bắc Kạn",
+    "FIELD3": "Thành phố Bắc Kạn",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Pác Nặm, Ba Bể, Ngân Sơn, Bạch Thông, Chợ Đồn, Chợ Mới, Na Rì",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "46",
+    "FIELD2": "Cao Bằng",
+    "FIELD3": "Thành phố Cao Bằng",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Trùng Khánh, Hà Quảng, Bảo Lạc, Bảo Lâm, Hạ Lang, Hòa An, Nguyên Bình, Phục Hòa, Thạch An, Trà Lĩnh, Thông Nông, Quảng Uyên",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "47",
+    "FIELD2": "Đắk Lắk",
+    "FIELD3": "Thành phố Buôn Mê Thuột",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Buôn Hồ, Buôn Đôn, Cư Kuin, Cư M'Gar, Ea Kar, Ea Súp, Krông Ana, Ea H'leo, Krông Bông, Krông Búk, Krông Năng, Krông Pắc, Lắk, M'Drắk",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "48",
+    "FIELD2": "Đắk Nông",
+    "FIELD3": "Gia Nghĩa, Cư Jút, Đắk Glong, Đắk Mil, Đắk R'lấp, Đắk Song, Krông Nô, Tuy Đức",
+    "FIELD4": "IV",
+    "FIELD5": "3.070.000"
+  },
+  {
+    "FIELD1": "49",
+    "FIELD2": "Điện Biên",
+    "FIELD3": "Thành phố Điện Biên Phủ",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Mường Lay, Điện Biên, Điện Biên Đông, Mường Ảng, Mường Chà, Mường Nhé, Tủa Chùa, Tuần Giáo, Nậm Pồ",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "50",
+    "FIELD2": "Đồng Tháp",
+    "FIELD3": "Thành phố: Cao Lãnh, Sa Đéc",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Hồng Ngự, Cao Lãnh, Châu Thành, Hồng Ngự, Lai Vung, Lấp Vò, Tam Nông, Tân Hồng, Thanh Bình, Tháp Mười",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "51",
+    "FIELD2": "Gia Lai",
+    "FIELD3": "Thành phố Pleiku",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "An Khê, Ayun Pa, Chư Păh, Chư Prông, Chư Sê, Đắk Đoa, Chư Pưh, Phú Thiện, Mang Yang, Krông Pa, Kông Chro, K'Bang, La Pa, La Grai, Đức Cơ, Đak Pơ",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "52",
+    "FIELD2": "Hà Giang",
+    "FIELD3": "Thành phố Hà Giang",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Bắc Mê, Bắc Quang, Đồng Văn, Hoàng Su Phì, Mèo Vạc, Quản Bạ, Quang Bình, Vị Xuyên, Xín Mần, Yên Minh",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "53",
+    "FIELD2": "Lai Châu",
+    "FIELD3": "Thành phố Lai Châu",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Mường Tè, Phong Thổ, Sìn Hồ, Tam Đường, Than Uyên, Tân Uyên, Nậm Nhùn",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "54",
+    "FIELD2": "Lạng Sơn",
+    "FIELD3": "Thành phố Lạng Sơn",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Bắc Sơn, Bình Gia, Cao Lộc, Chi Lăng, Đình Lập, Hữu Lũng, Lộc Bình, Tràng Định, Văn Lãng, Văn Quan",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "55",
+    "FIELD2": "Quảng Bình",
+    "FIELD3": "Thành phố Đồng Hới",
+    "FIELD4": "II",
+    "FIELD5": "3.920.000"
+  },
+  {
+    "FIELD1": "Ba Đồn, Lệ Thủy, Quảng Ninh, Bố Trạch, Quảng Trạch",
+    "FIELD2": "III",
+    "FIELD3": "3.430.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Minh Hóa, Tuyên Hóa",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "56",
+    "FIELD2": "Nghệ An",
+    "FIELD3": "Thành phố Vinh, Cửa Lò, Nghi Lộc, Hưng Nguyên",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Hoàng Mai, Thái Hòa, Anh Sơn, Con Cuông, Diễn Châu, Đô Lương, Quỳ Châu, Kỳ Sơn, Nam Đàn, Nghĩa Đàn, Quế Phong, Quỳ Hợp, Quỳnh Lưu, Tân Kỳ, Thanh Chương, Tương Dương, Yên Thành",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "57",
+    "FIELD2": "Quảng Trị",
+    "FIELD3": "Thành phố Đông Hà",
+    "FIELD4": "III",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "Quảng Trị, Cam Lộ, Cồn Cỏ, Đa Krông, Gio Linh, Hải Lăng, Hướng Hóa, Triệu Phong, Vĩnh Linh",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "58",
+    "FIELD2": "Sơn La",
+    "FIELD3": "Thành phố Sơn La",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Quỳnh Nhai, Mường La, Thuận Châu, Phù Yên, Bắc Yên, Mai Sơn, Sông Mã, Yên Châu, Mộc Châu, Sốp Cộp, Vân Hồ",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "59",
+    "FIELD2": "Thái Bình",
+    "FIELD3": "Thành phố Thái Bình",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Đông Hưng, Hưng Hà, Kiến Xương, Quỳnh Phụ, Thái Thụy, Tiền Hải, Vũ Thư",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "60",
+    "FIELD2": "Tuyên Quang",
+    "FIELD3": "Thành phố Tuyên Quang",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Chiêm Hóa, Hàm Yên, Lâm Bình, Na Hang, Sơn Dương, Yên Sơn",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "61",
+    "FIELD2": "Yên Bái",
+    "FIELD3": "Thành phố Yên Bái",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Nghĩa Lộ, Lục Yên, Mù Cang Chải, Trạm Tấu, Trấn Yên, Văn Chấn, Văn Yên, Yên Bình",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "62",
+    "FIELD2": "Bình Định",
+    "FIELD3": "Thành phố Quy Nhơn",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "An Nhơn, Hoài Nhơn, An Lão, Phù Cát, Phù Mỹ, Tuy Phước, Tây Sơn, Vân Canh, Vĩnh Thạnh, Hoài Ân",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  },
+  {
+    "FIELD1": "63",
+    "FIELD2": "Quãng Ngãi",
+    "FIELD3": "Thành phố Quảng Ngãi, Bình Sơn, Sơn Tịnh",
+    "FIELD4": "III",
+    "FIELD5": "3.430.000"
+  },
+  {
+    "FIELD1": "Ba Tơ, Đức Phổ, Minh Long, Mộ Đức, Lý Sơn, Tư Nghĩa, Trà Bồng, Tây Trà, Sơn Tây, Sơn Hà, Nghĩa Hành",
+    "FIELD2": "IV",
+    "FIELD3": "3.070.000",
+    "FIELD4": "",
+    "FIELD5": ""
+  }
+]
