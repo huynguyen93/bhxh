@@ -1,28 +1,20 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ModalSalary from "./components/ModalSalary";
-import ModalZones from './components/ModalZones';
 import {
-  maximumInsurancePerMonth,
-  minimumSalaryByZone,
-  months, percentageCompanyPays, percentageWorkerPays,
-  salaryTypes,
-  years,
-  zoneLabels,
-  zones
+  months,
+  years
 } from "./constants";
 import utils from "./utils";
 
 const defaultPeriod = {
   salary: '',
-  zone: zones.zone1,
 };
 
 function App() {
   const [periods, setPeriods] = React.useState([{...defaultPeriod}]);
   const [result, setResult] = React.useState(null);
   const [showModalSalary, setShowModalSalary] = React.useState(false);
-  const [showModalZone, setShowModalZone] = React.useState(false);
 
   const addPeriod = () => {
     setPeriods([...periods, {...defaultPeriod}]);
@@ -78,58 +70,37 @@ function App() {
     const localeString = salaryInInteger.toLocaleString('en');
     const formattedSalary = localeString.replace(/,/g, ' ');
 
-    const period = periods[periodIndex];
-    const zone = period.zone;
-    let amountPaidForInsurance = null;
-
-    if (salaryInInteger >= minimumSalaryByZone[zone] && salaryInInteger <= maximumInsurancePerMonth) {
-      amountPaidForInsurance = utils.calculateAmountPaid(salaryInInteger);
-    }
+    const amountPaidForInsurance = utils.calculateAmountPaid(salaryInInteger);
 
     updatePeriod(periodIndex, {salary: formattedSalary, amountPaidForInsurance});
   };
 
   return (
     <div className="App">
-      <h1>BHXH</h1>
-      <hr/>
       <table className="table table-bordered table-responsive-md">
         <thead>
         <tr>
-          <td>#</td>
-          <td>Từ... </td>
-          <td>Đến... </td>
-          <td>
+          <th>#</th>
+          <th>Từ... </th>
+          <th>Đến... </th>
+          <th>
             Lương đóng BHXH
             <button
               className="btn btn-sm btn-link mx-1"
               onClick={() => setShowModalSalary(true)}
               disabled={showModalSalary}
             >
-              *
+
             </button>
-          </td>
-          <td>Vùng</td>
-          <td></td>
+          </th>
+          <th/>
         </tr>
         </thead>
         <tbody>
           {periods.map((period, index) => {
             const {
               salary,
-              monthStart,
-              monthEnd,
-              yearStart,
-              yearEnd,
-              errorMessage,
-              amountPaidForInsurance,
             } = period;
-            let isValidTimeRange = true;
-            if (monthStart && monthEnd && yearStart && yearEnd) {
-              if (yearEnd < yearStart || (yearEnd === yearStart && monthEnd < monthStart)) {
-                isValidTimeRange = false;
-              }
-            }
 
             return (
               <tr key={index}>
@@ -179,45 +150,31 @@ function App() {
                     onChange={(e) => handleSalaryChange(index, e.target.value)}
                     style={{width: '120px'}}
                   />
+                  {' '}
+                  vnd
                 </td>
                 <td>
-                  {Object.keys(zoneLabels).map((zoneCode) => {
-                    const id = 'radio' + zoneCode;
-                    return (
-                      <div className="form-check form-check-inline mx-3" key={zoneCode}>
-                        <input
-                          className="form-check-input"
-                          type="radio"
-                          name="zone"
-                          id={id}
-                          value={zoneCode}
-                        />
-                        <label className="form-check-label" htmlFor={id}>{zoneLabels[zoneCode]}</label>
-                      </div>
-                    )
-                  })}
-                </td>
-                <td>
-                  <button
-                    onClick={addPeriod}
-                    className="btn btn-sm btn-success mr-2"
-                  >
-                    <b>+</b>
-                  </button>
                   <button
                     title="Xóa"
                     onClick={() => removePeriod(index)}
                     className="btn btn-sm rounded btn-danger"
                   >
-                    <b>-</b>
+                    xóa
                   </button>
-
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
+      <div className="mb-4">
+        <button
+          onClick={addPeriod}
+          className="btn btn-sm btn-secondary mr-2"
+        >
+          <b>+</b> thêm dòng
+        </button>
+      </div>
       <ul>
         {periods.map((period, index) => {
           const {
@@ -226,7 +183,6 @@ function App() {
             yearStart,
             yearEnd,
             errorMessage,
-            amountPaidForInsurance,
           } = period;
           let isValidTimeRange = true;
           if (monthStart && monthEnd && yearStart && yearEnd) {
@@ -235,53 +191,47 @@ function App() {
             }
           }
 
-          if (!amountPaidForInsurance && isValidTimeRange && !errorMessage) {
+          if (isValidTimeRange && !errorMessage) {
             return null;
           }
 
           return (
             <li key={index}>
-              {amountPaidForInsurance && (
-                <div className="mt-3">
-                  Số tiền đóng BHXH:
-                  <ul>
-                    <li>Công ty đóng ({percentageCompanyPays}%): {utils.formatNumber(amountPaidForInsurance.byCompany)}</li>
-                    <li>Người lao động đóng ({percentageWorkerPays}%): {utils.formatNumber(amountPaidForInsurance.byWorker)}</li>
-                    <li>Tổng cộng: <strong>{utils.formatNumber(amountPaidForInsurance.total)}đ / tháng</strong></li>
-                  </ul>
-                </div>
-              )}
+              Lỗi ở dòng {index + 1}:
+              {' '}
               {!isValidTimeRange && (
-                <div>
-                  <span className="text-danger">Thời gian không phù hợp, vui lòng chọn lại!</span>
-                </div>
+                <span className="text-danger">Thời gian không phù hợp, vui lòng chọn lại!</span>
               )}
+              {' '}
               {errorMessage && (
-                <div>
-                  <span className="text-danger">{errorMessage}</span>
-                </div>
+                <span className="text-danger">{errorMessage}</span>
               )}
             </li>
           );
         })}
       </ul>
 
-      <div className="mt-5">
+      <div className="mt-5 mb-5">
         <button
           className="btn btn-lg btn-primary"
           onClick={calculate}
         >
-          Tính
+          Xem kết quả
         </button>
       </div>
       {result && (
         <div>
-          <h3>Result</h3>
-          <p>{result.result}</p>
+          <h2>Kết quả</h2>
+          <p>Số tháng đóng BHXH: {result.totalMonths}</p>
+          <p>Thu nhập bình quân: {utils.formatNumber(result.adjustedAverageSalary)} vnd</p>
+          <p className="text-success">
+            <b>
+              Số tiền sẽ nhận: {utils.formatNumber(result.amountWillReceive)} vnd
+            </b>
+          </p>
         </div>
       )}
       <ModalSalary show={showModalSalary} setShow={setShowModalSalary}/>
-      <ModalZones show={showModalZone} setShow={setShowModalZone} />
     </div>
   );
 }

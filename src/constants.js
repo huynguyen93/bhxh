@@ -32,5 +32,3 @@ export const salaryTypes = {contracted: 'contracted', insurance: 'insurance'};
 
 export const percentageCompanyPays = 17.5;
 export const percentageWorkerPays = 8;
-
-console.log(minimumSalaryByZone);

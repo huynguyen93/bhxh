@@ -10,7 +10,7 @@ function calculatePeriods(periods) {
     const yearStart = parseInt(period.yearStart);
     const monthEnd = parseInt(period.monthEnd);
     const yearEnd = parseInt(period.yearEnd);
-    const salary = parseInt(period.salary);
+    const salary = parseInt(period.salary.split(' ').join(''));
     const salaryType = period.salaryType;
     const insuranceSalary = salaryType === salaryTypes.contracted
       ? contractedSalaryToInsuranceSalary(salary)
@@ -46,7 +46,9 @@ function calculatePeriods(periods) {
   const totalYearsFrom2014 = totalMonthsFrom2014 / 12;
 
   return {
-    result: (1.5 * adjustedAverageSalary * totalYearsBefore2014) + (2.5 * adjustedAverageSalary * totalYearsFrom2014)
+    adjustedAverageSalary,
+    totalMonths,
+    amountWillReceive: (1.5 * adjustedAverageSalary * totalYearsBefore2014) + (2 * adjustedAverageSalary * totalYearsFrom2014)
   };
 }
 
@@ -62,7 +64,45 @@ function validatePeriod(period) {
 }
 
 function getAdjustmentRate(year) {
-  return 2;
+  const mapping = {
+    1995: 4.85,
+    1996: 4.12,
+    1997: 3.89,
+    1998: 3.77,
+    1999: 3.5,
+    2000: 3.41,
+    2001: 3.42,
+    2002: 3.29,
+    2003: 3.19,
+    2004: 2.96,
+    2005: 2.73,
+    2006: 2.54,
+    2007: 2.35,
+    2008: 1.91,
+    2009: 1.79,
+    2010: 1.64,
+    2011: 1.38,
+    2012: 1.26,
+    2013: 1.18,
+    2014: 1.14,
+    2015: 1.13,
+    2016: 1.1,
+    2017: 1.06,
+    2018: 1.03,
+    2019: 1,
+    2020: 1,
+  };
+
+  const years = Object.keys(mapping);
+  if (year < mapping[years[0]]) {
+    return mapping[years[0]];
+  }
+
+  if (year > mapping[years[years.length - 1]]) {
+    return mapping[years[years.length - 1]];
+  }
+
+  return mapping[year];
 }
 
 function getNumberOfYear({monthStart, yearStart, monthEnd, yearEnd}) {
