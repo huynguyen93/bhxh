@@ -51,9 +51,13 @@ function Result({ result }) {
           <li>Thời gian đóng BHXH có tháng lẻ thì từ 01 - 06 tháng được tính là ½ năm, từ 07 - 11 tháng được tính là 01 năm.</li>
           <li>Trường hợp tính đến trước 01/01/2014 nếu thời gian đóng BHXH có tháng lẻ thì những tháng lẻ đó được chuyển sang giai đoạn đóng BHXH từ 01/01/2014 trở đi.</li>
           <li>
-            <a href="#" onClick={() => {setShowModalAdjustments(!showModalAdjustments)}}>
+            <button
+              className="btn btn-sm btn-link"
+              onClick={() => setShowModalAdjustments(!showModalAdjustments)}
+              disabled={showModalAdjustments}
+            >
               Xem bảng mức điều chỉnh hằng năm
-            </a>
+            </button>
           </li>
         </ul>
 

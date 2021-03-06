@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/static/js/main.d601cfde.chunk.js",
-    "main.js.map": "/static/js/main.d601cfde.chunk.js.map",
+    "main.js": "/static/js/main.363a039a.chunk.js",
+    "main.js.map": "/static/js/main.363a039a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.64f24c7a.js",
     "runtime-main.js.map": "/static/js/runtime-main.64f24c7a.js.map",
     "static/css/2.150d169a.chunk.css": "/static/css/2.150d169a.chunk.css",
@@ -13,13 +13,17 @@
     "index.html": "/index.html",
     "static/css/2.150d169a.chunk.css.map": "/static/css/2.150d169a.chunk.css.map",
     "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.120e43d9.chunk.js.LICENSE.txt": "/static/js/2.120e43d9.chunk.js.LICENSE.txt"
+    "static/js/2.120e43d9.chunk.js.LICENSE.txt": "/static/js/2.120e43d9.chunk.js.LICENSE.txt",
+    "static/media/bhxh-app-1.c1b48415.jpg": "/static/media/bhxh-app-1.c1b48415.jpg",
+    "static/media/bhxh-app-2.25fc720e.jpg": "/static/media/bhxh-app-2.25fc720e.jpg",
+    "static/media/bhxh-cover.24dc26a2.jpg": "/static/media/bhxh-cover.24dc26a2.jpg",
+    "static/media/bhxh-explain.cffbd6a9.jpg": "/static/media/bhxh-explain.cffbd6a9.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.64f24c7a.js",
     "static/css/2.150d169a.chunk.css",
     "static/js/2.120e43d9.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.d601cfde.chunk.js"
+    "static/js/main.363a039a.chunk.js"
   ]
 }

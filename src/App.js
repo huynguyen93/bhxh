@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ModalSalary from "./components/ModalSalary";
+import ModalInsuranceSalary from './components/ModalInsuranceSalary';
 import Result from './components/Result';
 import {
   months,
@@ -28,7 +28,6 @@ function App() {
   };
 
   const calculate = () => {
-    const isValid = true;
     const updatedPeriods = [];
     let hasError = false;
 
@@ -82,22 +81,16 @@ function App() {
 
   return (
     <div className="App">
+      <button className="btn btn-sm btn-link" onClick={() => setShowModalSalary(true)} disabled={showModalSalary}>
+        Hướng dẫn kiểm tra mức lương đóng BHXH
+      </button>
       <table className="table table-bordered table-responsive-md">
         <thead>
         <tr>
           <th>#</th>
           <th>Từ... </th>
           <th>Đến... </th>
-          <th>
-            Lương đóng BHXH
-            <button
-              className="btn btn-sm btn-link mx-1"
-              onClick={() => setShowModalSalary(true)}
-              disabled={showModalSalary}
-            >
-
-            </button>
-          </th>
+          <th>Lương đóng BHXH</th>
           <th/>
         </tr>
         </thead>
@@ -229,7 +222,10 @@ function App() {
           result={result}
         />
       )}
-      <ModalSalary show={showModalSalary} setShow={setShowModalSalary}/>
+      <ModalInsuranceSalary
+        show={showModalSalary}
+        setShow={setShowModalSalary}
+      />
     </div>
   );
 }

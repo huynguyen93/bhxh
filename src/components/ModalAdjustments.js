@@ -19,8 +19,8 @@ function ModalAdjustments({ show, setShow}) {
         <p>
           Theo
           {' '}
-          <a href="https://luatvietnam.vn/lao-dong/thong-tu-35-2019-tt-bldtbxh-muc-dieu-chinh-tien-luong-thu-nhap-thang-da-dong-bao-hiem-xa-hoi-180368-d1.html">
-          Điều 2 Thông tư 35/2019/TT-BLĐTBXH
+          <a target="_blank" href="https://luatvietnam.vn/lao-dong/thong-tu-35-2019-tt-bldtbxh-muc-dieu-chinh-tien-luong-thu-nhap-thang-da-dong-bao-hiem-xa-hoi-180368-d1.html">
+            Điều 2 Thông tư 35/2019/TT-BLĐTBXH
           </a>,
           mức điều chỉnh tiền lương tháng đóng BHXH của người lao động như sau:
         </p>
