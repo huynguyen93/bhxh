@@ -90,11 +90,11 @@ function validatePeriod(period) {
 
 function getAdjustmentRate(year) {
   const years = Object.keys(adjustments);
-  if (year < adjustments[years[0]]) {
+  if (year < years[0]) {
     return adjustments[years[0]];
   }
 
-  if (year > adjustments[years[years.length - 1]]) {
+  if (year > years[years.length - 1]) {
     return adjustments[years[years.length - 1]];
   }
 

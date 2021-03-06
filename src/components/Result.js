@@ -4,6 +4,7 @@ import ModalAdjustments from './ModalAdjustments';
 
 function Result({ result }) {
   const [showModalAdjustments, setShowModalAdjustments] = React.useState(false);
+  console.log(result);
 
   return (
     <div>
