@@ -108,7 +108,7 @@ function App() {
                 <td>
                   <select
                     id="inputState"
-                    className="mx-3"
+                    className="mr-3"
                     onChange={(e) => updatePeriod(index, {monthStart: e.target.value})}
                   >
                     <option>Tháng...</option>
@@ -126,7 +126,7 @@ function App() {
                 <td>
                   <select
                     id="inputState"
-                    className="mx-3"
+                    className="mr-3"
                     onChange={(e) => updatePeriod(index, {monthEnd: e.target.value})}
                   >
                     <option>Tháng...</option>
@@ -151,7 +151,7 @@ function App() {
                     style={{width: '120px'}}
                   />
                   {' '}
-                  vnd
+                  vnđ
                 </td>
                 <td>
                   <button
@@ -215,6 +215,7 @@ function App() {
         <button
           className="btn btn-lg btn-primary"
           onClick={calculate}
+          disabled={periods.length === 0}
         >
           Xem kết quả
         </button>
@@ -222,11 +223,12 @@ function App() {
       {result && (
         <div>
           <h2>Kết quả</h2>
-          <p>Số tháng đóng BHXH: {result.totalMonths}</p>
-          <p>Thu nhập bình quân: {utils.formatNumber(result.adjustedAverageSalary)} vnd</p>
+          <p>Số tháng tham gia BHXH: {result.totalMonths}</p>
+          <p>Mức lương đóng BHXH bình quân: {utils.formatNumber(result.adjustedAverageSalary, true)} / tháng</p>
+          <p>Số tiền <i>ước tính</i> đã đóng: {utils.formatNumber(result.estimatedContributed, true)}</p>
           <p className="text-success">
             <b>
-              Số tiền sẽ nhận: {utils.formatNumber(result.amountWillReceive)} vnd
+              Số tiền <i>ước tính</i> sẽ nhận: <u>{utils.formatNumber(result.amountWillReceive, true)}</u>
             </b>
           </p>
         </div>

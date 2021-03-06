@@ -24,18 +24,35 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Rút BHXH</title>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=374157023027041&autoLogAppEvents=1" nonce="ZhgJwa9T"></script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm">
-      <p class="h5 my-0 me-md-auto fw-normal">Rút BHXH 1 lần</p>
+      <p class="h3 my-0 me-md-auto fw-normal">Rút BHXH</p>
+      <nav class="my-2 my-md-0 me-md-3">
+        <a class="p-2 text-dark" target="_blank" href="https://ebh.vn/nghiep-vu-tong-hop/tong-quan-ve-bao-hiem-xa-hoi-va-cac-che-do-bhxh-tai-viet-nam">
+          BHXH là gì?
+        </a>
+        <a class="p-2 text-dark" target="_blank" href="https://voz.vn/t/bhxh-linh-1-lan-hay-linh-luong-huu-hay-em-tinh-sai.175215/">
+          Có nên rút BHXH?
+        </a>
+      </nav>
     </header>
     <main class="container">
-      <h1>Tính số tiền bạn sẽ nhận được nếu rút BHXH 1 lần.</h1>
-      <p>* Kết quả có thể chênh lệch so với thực tế!</p>
+      <h1>Tính số tiền bạn sẽ nhận được nếu rút BHXH</h1>
+      <p>Nhập mức lương đóng bảo hiểm của bạn vào bảng bên dưới để tính!</p>
+      <p class="text-secondary"><small>* Kết quả có thể chênh lệch nhỏ so với thực tế!</small></p>
       <hr>
-      <div id="root"></div>
+      <div id="root" class="pb-3"></div>
+
+      <div class="mt-5">
+        <hr>
+        <h5>Bình luận & góp ý</h5>
+        <div class="fb-comments" data-href="https://bhxh.khoahuy.com" data-width="" data-numposts="10"></div>
+      </div>
     </main>
     <!--
       This HTML file is a template.

@@ -4,6 +4,7 @@ function calculatePeriods(periods) {
   let totalMonthsBefore2014 = 0;
   let totalMonthsFrom2014 = 0;
   let adjustedSalary = 0;
+  let estimatedContributed = 0;
 
   periods.forEach(period => {
     const monthStart = parseInt(period.monthStart);
@@ -31,6 +32,7 @@ function calculatePeriods(periods) {
       }
 
       adjustedSalary += (totalMonthsOfPeriod * insuranceSalary * adjustment);
+      estimatedContributed += (totalMonthsOfPeriod * insuranceSalary) * 20 / 100;
 
       if (yearEnd < 2014) {
         totalMonthsBefore2014 += totalMonthsOfPeriod;
@@ -46,6 +48,8 @@ function calculatePeriods(periods) {
   const totalYearsFrom2014 = totalMonthsFrom2014 / 12;
 
   return {
+    estimatedContributed,
+    adjustedSalary,
     adjustedAverageSalary,
     totalMonths,
     amountWillReceive: (1.5 * adjustedAverageSalary * totalYearsBefore2014) + (2 * adjustedAverageSalary * totalYearsFrom2014)
@@ -124,8 +128,9 @@ function calculateAmountPaid(insuranceSalary) {
   };
 }
 
-function formatNumber(number) {
-  return Math.round(number).toLocaleString('en');
+function formatNumber(number, withVnd = false) {
+  const suffix = withVnd ? ' vnđ' : '';
+  return Math.round(number).toLocaleString('en') + suffix;
 }
 
 export default {
