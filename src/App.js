@@ -78,7 +78,7 @@ function App() {
 
     updatePeriod(periodIndex, {salary: formattedSalary, amountPaidForInsurance});
   };
-console.log(result);
+
   return (
     <div className="App">
       <table className="table table-bordered table-responsive-md">
@@ -234,6 +234,11 @@ console.log(result);
             <b>
               Số tiền <i>ước tính</i> sẽ nhận: <u>{utils.formatNumber(result.amountWillReceive, true)}</u>
             </b>
+          </p>
+          <p>
+            <p className="text-secondary">
+              <small>* Kết quả có thể chênh lệch nhỏ so với thực tế vì nhiều lý do!</small>
+            </p>
           </p>
 
           <div className="mt-5">
