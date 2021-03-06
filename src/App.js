@@ -18,10 +18,12 @@ function App() {
 
   const addPeriod = () => {
     setPeriods([...periods, {...defaultPeriod}]);
+    setResult(null);
   };
 
   const removePeriod = (index) => {
     setPeriods([...periods.filter((period, idx) => idx !== index)]);
+    setResult(null);
   };
 
   const calculate = () => {
@@ -58,6 +60,8 @@ function App() {
     setPeriods([
       ...updatedPeriods,
     ]);
+
+    setResult(null);
   };
 
   const handleSalaryChange = (periodIndex, salary) => {
@@ -74,7 +78,7 @@ function App() {
 
     updatePeriod(periodIndex, {salary: formattedSalary, amountPaidForInsurance});
   };
-
+console.log(result);
   return (
     <div className="App">
       <table className="table table-bordered table-responsive-md">
@@ -225,12 +229,76 @@ function App() {
           <h2>Kết quả</h2>
           <p>Số tháng tham gia BHXH: {result.totalMonths}</p>
           <p>Mức lương đóng BHXH bình quân: {utils.formatNumber(result.adjustedAverageSalary, true)} / tháng</p>
-          <p>Số tiền <i>ước tính</i> đã đóng: {utils.formatNumber(result.estimatedContributed, true)}</p>
+          <p>Số tiền <i>ước tính</i> đã đóng BHXH: {utils.formatNumber(result.estimatedContributed, true)}</p>
           <p className="text-success">
             <b>
               Số tiền <i>ước tính</i> sẽ nhận: <u>{utils.formatNumber(result.amountWillReceive, true)}</u>
             </b>
           </p>
+
+          <div className="mt-5">
+            <h4>Công thức</h4>
+            <table className="table table-borderless table-responsive">
+              <tbody>
+              <tr>
+                <td><b>Mức hưởng</b></td>
+                <td>=</td>
+                <td>(1,5 x Mbqtl x Thời gian đóng BHXH trước năm 2014)</td>
+                <td>+</td>
+                <td>(2 x Mbqtl x Thời gian đóng BHXH sau năm 2014)</td>
+              </tr>
+              </tbody>
+            </table>
+            <p>
+              Trong đó:
+              <ul>
+                <li>Thời gian đóng BHXH có tháng lẻ thì từ 01 - 06 tháng được tính là ½ năm, từ 07 - 11 tháng được tính là 01 năm.</li>
+                <li>Trường hợp tính đến trước 01/01/2014 nếu thời gian đóng BHXH có tháng lẻ thì những tháng lẻ đó được chuyển sang giai đoạn đóng BHXH từ 01/01/2014 trở đi.</li>
+                <li>Mbqtl là mức bình quân tiền lương tháng đóng BHXH.</li>
+              </ul>
+            </p>
+            <table className="table table-borderless table-responsive">
+              <tbody>
+              <tr>
+                <td><b>Mbqtl</b></td>
+                <td>=</td>
+                <td>(Số tháng đóng BHXH x Tiền lương tháng đóng BHXH x Mức điều chỉnh hàng năm)</td>
+                <td>:</td>
+                <td>Tổng số tháng đóng BHXH</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <p>Dựa theo công thức:</p>
+            <table className="table table-borderless table-responsive">
+              <tbody>
+              <tr>
+                <td><b>Mbqtl</b></td>
+                <td>=</td>
+                <td>{result.adjustedAverageSalaryFormula}</td>
+                <td>=</td>
+                <td>{utils.formatNumber(result.adjustedAverageSalary)}</td>
+              </tr>
+              <tr>
+                <td><b>Mức hưởng</b></td>
+                <td>=</td>
+                <td>
+                  {result.totalYearsBefore2014 > 0 && (
+                    `(${1.5} x ${result.adjustedAverageSalary} x ${result.totalYearsBefore2014})`
+                  )}
+                  {result.totalYearsBefore2014 > 0 && result.totalYearsFrom2014 > 0 && (
+                    ' + '
+                  )}
+                  {result.totalYearsFrom2014 > 0 && (
+                    `(${1.5} x ${result.adjustedAverageSalary} x ${result.totalYearsFrom2014})`
+                  )}
+                </td>
+                <td>=</td>
+                <td>{utils.formatNumber(result.amountWillReceive)}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
       <ModalSalary show={showModalSalary} setShow={setShowModalSalary}/>

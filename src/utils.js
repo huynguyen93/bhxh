@@ -5,6 +5,7 @@ function calculatePeriods(periods) {
   let totalMonthsFrom2014 = 0;
   let adjustedSalary = 0;
   let estimatedContributed = 0;
+  let adjustedAverageSalaryFormula = '{';
 
   periods.forEach(period => {
     const monthStart = parseInt(period.monthStart);
@@ -31,10 +32,11 @@ function calculatePeriods(periods) {
         totalMonthsOfPeriod = 12;
       }
 
+      adjustedAverageSalaryFormula += `(${totalMonthsOfPeriod} * ${formatNumber(insuranceSalary)} * ${adjustment})`
       adjustedSalary += (totalMonthsOfPeriod * insuranceSalary * adjustment);
       estimatedContributed += (totalMonthsOfPeriod * insuranceSalary) * 20 / 100;
 
-      if (yearEnd < 2014) {
+      if (year < 2014) {
         totalMonthsBefore2014 += totalMonthsOfPeriod;
       } else {
         totalMonthsFrom2014 += totalMonthsOfPeriod;
@@ -43,17 +45,36 @@ function calculatePeriods(periods) {
   });
 
   const totalMonths = totalMonthsBefore2014 + totalMonthsFrom2014;
+
   const adjustedAverageSalary = adjustedSalary / totalMonths;
-  const totalYearsBefore2014 = totalMonthsBefore2014 / 12;
-  const totalYearsFrom2014 = totalMonthsFrom2014 / 12;
+  const totalYearsBefore2014 = calculateTotalYears(totalMonthsBefore2014);
+  const totalYearsFrom2014 = calculateTotalYears(totalMonthsFrom2014);
+
+  adjustedAverageSalaryFormula = adjustedAverageSalaryFormula.split(')(').join(') + (');
+  adjustedAverageSalaryFormula += `} : ${totalMonths}`;
 
   return {
+    totalYearsBefore2014,
+    totalYearsFrom2014,
+    adjustedAverageSalaryFormula,
     estimatedContributed,
     adjustedSalary,
     adjustedAverageSalary,
     totalMonths,
     amountWillReceive: (1.5 * adjustedAverageSalary * totalYearsBefore2014) + (2 * adjustedAverageSalary * totalYearsFrom2014)
   };
+}
+
+function calculateTotalYears(totalMonths) {
+  const modulo = totalMonths % 12;
+  const rawYears = totalMonths / 12;
+  if (modulo === 0) {
+    return rawYears;
+  } else if (modulo <= 6) {
+    return Math.round(rawYears) + 0.5
+  } else {
+    return Math.ceil(rawYears);
+  }
 }
 
 function validatePeriod(period) {
@@ -107,10 +128,6 @@ function getAdjustmentRate(year) {
   }
 
   return mapping[year];
-}
-
-function getNumberOfYear({monthStart, yearStart, monthEnd, yearEnd}) {
-  return 1;
 }
 
 function contractedSalaryToInsuranceSalary(contractedSalary) {
