@@ -32,3 +32,33 @@ export const salaryTypes = {contracted: 'contracted', insurance: 'insurance'};
 
 export const percentageCompanyPays = 17.5;
 export const percentageWorkerPays = 8;
+
+export const adjustments = {
+  1994: 4.85,
+  1995: 4.12,
+  1996: 4.89,
+  1997: 3.77,
+  1998: 3.5,
+  1999: 3.35,
+  2000: 3.41,
+  2001: 3.42,
+  2002: 3.29,
+  2003: 3.19,
+  2004: 2.96,
+  2005: 2.73,
+  2006: 2.54,
+  2007: 2.35,
+  2008: 1.91,
+  2009: 1.79,
+  2010: 1.64,
+  2011: 1.38,
+  2012: 1.26,
+  2013: 1.18,
+  2014: 1.14,
+  2015: 1.13,
+  2016: 1.1,
+  2017: 1.06,
+  2018: 1.03,
+  2019: 1,
+  2020: 1,
+};

@@ -1,4 +1,4 @@
-import {percentageCompanyPays, percentageWorkerPays, salaryTypes} from "./constants";
+import {adjustments, percentageCompanyPays, percentageWorkerPays, salaryTypes} from "./constants";
 
 function calculatePeriods(periods) {
   let totalMonthsBefore2014 = 0;
@@ -89,45 +89,16 @@ function validatePeriod(period) {
 }
 
 function getAdjustmentRate(year) {
-  const mapping = {
-    1995: 4.85,
-    1996: 4.12,
-    1997: 3.89,
-    1998: 3.77,
-    1999: 3.5,
-    2000: 3.41,
-    2001: 3.42,
-    2002: 3.29,
-    2003: 3.19,
-    2004: 2.96,
-    2005: 2.73,
-    2006: 2.54,
-    2007: 2.35,
-    2008: 1.91,
-    2009: 1.79,
-    2010: 1.64,
-    2011: 1.38,
-    2012: 1.26,
-    2013: 1.18,
-    2014: 1.14,
-    2015: 1.13,
-    2016: 1.1,
-    2017: 1.06,
-    2018: 1.03,
-    2019: 1,
-    2020: 1,
-  };
-
-  const years = Object.keys(mapping);
-  if (year < mapping[years[0]]) {
-    return mapping[years[0]];
+  const years = Object.keys(adjustments);
+  if (year < adjustments[years[0]]) {
+    return adjustments[years[0]];
   }
 
-  if (year > mapping[years[years.length - 1]]) {
-    return mapping[years[years.length - 1]];
+  if (year > adjustments[years[years.length - 1]]) {
+    return adjustments[years[years.length - 1]];
   }
 
-  return mapping[year];
+  return adjustments[year];
 }
 
 function contractedSalaryToInsuranceSalary(contractedSalary) {
