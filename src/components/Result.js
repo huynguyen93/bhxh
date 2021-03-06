@@ -29,16 +29,20 @@ function Result({ result }) {
           <tr>
             <td><b>Mbqtl</b></td>
             <td>=</td>
-            <td style={{maxWidth: '400px'}}>(Số tháng đóng BHXH x Tiền lương tháng đóng BHXH x Mức điều chỉnh hàng năm)</td>
-            <td>:</td>
-            <td>Tổng số tháng đóng BHXH</td>
+            <td>
+              (Số tháng đóng BHXH x Tiền lương tháng đóng BHXH x Mức điều chỉnh hàng năm)
+              {' : '}
+              Tổng số tháng đóng BHXH
+            </td>
           </tr>
           <tr>
             <td><b>Mức hưởng</b></td>
             <td>=</td>
-            <td>(1,5 x Mbqtl x Thời gian đóng BHXH trước năm 2014)</td>
-            <td>+</td>
-            <td>(2 x Mbqtl x Thời gian đóng BHXH sau năm 2014)</td>
+            <td>
+              (1,5 x Mbqtl x Thời gian đóng BHXH trước năm 2014)
+              {' + '}
+              (2 x Mbqtl x Thời gian đóng BHXH sau năm 2014)
+            </td>
           </tr>
           </tbody>
         </table>
