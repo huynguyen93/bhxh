@@ -27,6 +27,13 @@ function Result({ result }) {
         <table className="table table-borderless table-responsive">
           <tbody>
           <tr>
+            <td><b>Mbqtl</b></td>
+            <td>=</td>
+            <td style={{maxWidth: '400px'}}>(Số tháng đóng BHXH x Tiền lương tháng đóng BHXH x Mức điều chỉnh hàng năm)</td>
+            <td>:</td>
+            <td>Tổng số tháng đóng BHXH</td>
+          </tr>
+          <tr>
             <td><b>Mức hưởng</b></td>
             <td>=</td>
             <td>(1,5 x Mbqtl x Thời gian đóng BHXH trước năm 2014)</td>
@@ -38,26 +45,18 @@ function Result({ result }) {
         <p>
           Trong đó:
           <ul>
+            <li>Mbqtl là mức bình quân tiền lương tháng đóng BHXH.</li>
             <li>Thời gian đóng BHXH có tháng lẻ thì từ 01 - 06 tháng được tính là ½ năm, từ 07 - 11 tháng được tính là 01 năm.</li>
             <li>Trường hợp tính đến trước 01/01/2014 nếu thời gian đóng BHXH có tháng lẻ thì những tháng lẻ đó được chuyển sang giai đoạn đóng BHXH từ 01/01/2014 trở đi.</li>
-            <li>Mbqtl là mức bình quân tiền lương tháng đóng BHXH.</li>
+            <li>
+              <a href="#" onClick={() => {setShowModalAdjustments(!showModalAdjustments)}}>
+                Xem bảng mức điều chỉnh hằng năm
+              </a>
+            </li>
           </ul>
         </p>
-        <table className="table table-borderless table-responsive">
-          <tbody>
-          <tr>
-            <td><b>Mbqtl</b></td>
-            <td>=</td>
-            <td>(Số tháng đóng BHXH x Tiền lương tháng đóng BHXH x Mức điều chỉnh hàng năm)</td>
-            <td>:</td>
-            <td>Tổng số tháng đóng BHXH</td>
-          </tr>
-          </tbody>
-        </table>
 
-        <a href="#" onClick={() => {setShowModalAdjustments(!showModalAdjustments)}}>
-          <small>Xem bảng mức điều chỉnh hằng năm</small>
-        </a>
+
 
         <p className="mt-4">Dựa theo công thức:</p>
         <table className="table table-borderless table-responsive">
