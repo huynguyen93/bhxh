@@ -181,13 +181,12 @@ function App() {
       </div>
       <ul>
         {periods.map((period, index) => {
-          const {
-            monthStart,
-            monthEnd,
-            yearStart,
-            yearEnd,
-            errorMessage,
-          } = period;
+          const monthStart = parseInt(period.monthStart);
+          const monthEnd = parseInt(period.monthEnd);
+          const yearStart = parseInt(period.yearStart);
+          const yearEnd = parseInt(period.yearEnd);
+          const {errorMessage} = period;
+
           let isValidTimeRange = true;
           if (monthStart && monthEnd && yearStart && yearEnd) {
             if (yearEnd < yearStart || (yearEnd === yearStart && monthEnd < monthStart)) {
