@@ -17,10 +17,8 @@ function Result({ result }) {
           Số tiền <i>ước tính</i> sẽ nhận: <u>{utils.formatNumber(result.amountWillReceive, true)}</u>
         </b>
       </p>
-      <p>
-        <p className="text-secondary">
-          <small>* Kết quả có thể chênh lệch nhỏ so với thực tế vì nhiều lý do!</small>
-        </p>
+      <p className="text-secondary">
+        <small>* Kết quả có thể chênh lệch nhỏ so với thực tế vì nhiều lý do!</small>
       </p>
 
       <div className="mt-5">
@@ -47,20 +45,17 @@ function Result({ result }) {
           </tr>
           </tbody>
         </table>
-        <p>
-          Trong đó:
-          <ul>
-            <li>Mbqtl là mức bình quân tiền lương tháng đóng BHXH.</li>
-            <li>Thời gian đóng BHXH có tháng lẻ thì từ 01 - 06 tháng được tính là ½ năm, từ 07 - 11 tháng được tính là 01 năm.</li>
-            <li>Trường hợp tính đến trước 01/01/2014 nếu thời gian đóng BHXH có tháng lẻ thì những tháng lẻ đó được chuyển sang giai đoạn đóng BHXH từ 01/01/2014 trở đi.</li>
-            <li>
-              <a href="#" onClick={() => {setShowModalAdjustments(!showModalAdjustments)}}>
-                Xem bảng mức điều chỉnh hằng năm
-              </a>
-            </li>
-          </ul>
-        </p>
-
+        Trong đó
+        <ul>
+          <li>Mbqtl là mức bình quân tiền lương tháng đóng BHXH.</li>
+          <li>Thời gian đóng BHXH có tháng lẻ thì từ 01 - 06 tháng được tính là ½ năm, từ 07 - 11 tháng được tính là 01 năm.</li>
+          <li>Trường hợp tính đến trước 01/01/2014 nếu thời gian đóng BHXH có tháng lẻ thì những tháng lẻ đó được chuyển sang giai đoạn đóng BHXH từ 01/01/2014 trở đi.</li>
+          <li>
+            <a href="#" onClick={() => {setShowModalAdjustments(!showModalAdjustments)}}>
+              Xem bảng mức điều chỉnh hằng năm
+            </a>
+          </li>
+        </ul>
 
 
         <p className="mt-4">Dựa theo công thức:</p>
