@@ -284,13 +284,13 @@ console.log(result);
                 <td>=</td>
                 <td>
                   {result.totalYearsBefore2014 > 0 && (
-                    `(${1.5} x ${result.adjustedAverageSalary} x ${result.totalYearsBefore2014})`
+                    `(${1.5} x ${utils.formatNumber(result.adjustedAverageSalary)} x ${result.totalYearsBefore2014})`
                   )}
                   {result.totalYearsBefore2014 > 0 && result.totalYearsFrom2014 > 0 && (
                     ' + '
                   )}
                   {result.totalYearsFrom2014 > 0 && (
-                    `(${1.5} x ${result.adjustedAverageSalary} x ${result.totalYearsFrom2014})`
+                    `(${2} x ${utils.formatNumber(result.adjustedAverageSalary)} x ${result.totalYearsFrom2014})`
                   )}
                 </td>
                 <td>=</td>
