@@ -19,6 +19,7 @@ function ModalInsuranceSalary({ show, setShow }) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
+        <p>Bạn có thể thử 1 trong 2 cách sau đây:</p>
         <h4>1. Xem trong số BHXH</h4>
         <a href={bhxhCover} target="_blank">
           <img className="img-fluid" src={bhxhCover} alt="bìa sổ BHXH"/>
@@ -29,7 +30,7 @@ function ModalInsuranceSalary({ show, setShow }) {
 
         <hr/>
 
-        <h4>2. Xem trong ứng dụng điện thoại BHXH</h4>
+        <h4>2. Xem trong ứng dụng trên smartphone</h4>
         <p>Bạn cũng có thể tải App VssID để kiểm tra mức lương đóng BHXH</p>
         <ul>
           <li>
@@ -59,7 +60,7 @@ function ModalInsuranceSalary({ show, setShow }) {
 
         <hr/>
 
-        <p>Nếu bạn không xem được = cả 2 cách trên, hãy thử hỏi bộ phận kế toán / nhân sự của công ty bạn!</p>
+        <p>Nếu bạn không xem được bằng cả 2 cách trên, hãy thử hỏi bộ phận kế toán / nhân sự của công ty bạn!</p>
       </Modal.Body>
     </Modal>
   );
