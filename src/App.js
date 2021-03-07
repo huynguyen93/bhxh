@@ -90,7 +90,9 @@ function App() {
           <th>#</th>
           <th>Từ... </th>
           <th>Đến... </th>
-          <th>Lương đóng BHXH</th>
+          <th>
+            Mức lương đóng BHXH
+          </th>
           <th/>
         </tr>
         </thead>
@@ -105,7 +107,6 @@ function App() {
                 <td>{index + 1}</td>
                 <td>
                   <select
-                    id="inputState"
                     className="mr-3"
                     onChange={(e) => updatePeriod(index, {monthStart: e.target.value})}
                   >
@@ -113,7 +114,6 @@ function App() {
                     {months.map((label, index) => (<option value={index + 1} key={index}>{label}</option>))}
                   </select>
                   <select
-                    id="inputState"
                     className=""
                     onChange={(e) => updatePeriod(index, {yearStart: e.target.value})}
                   >
@@ -123,7 +123,6 @@ function App() {
                 </td>
                 <td>
                   <select
-                    id="inputState"
                     className="mr-3"
                     onChange={(e) => updatePeriod(index, {monthEnd: e.target.value})}
                   >
@@ -131,7 +130,6 @@ function App() {
                     {months.map((label, index) => (<option value={index + 1} key={index}>{label}</option>))}
                   </select>
                   <select
-                    id="inputState"
                     onChange={(e) => updatePeriod(index, {yearEnd: e.target.value})}
                   >
                     <option>Năm...</option>
@@ -142,7 +140,6 @@ function App() {
                   <input
                     type="text"
                     placeholder="10 000 000"
-                    id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     value={salary}
                     onChange={(e) => handleSalaryChange(index, e.target.value)}
@@ -208,19 +205,26 @@ function App() {
         })}
       </ul>
 
-      <div className="mt-5 mb-5">
-        <button
-          className="btn btn-lg btn-primary"
-          onClick={calculate}
-          disabled={periods.length === 0}
-        >
-          Xem kết quả
-        </button>
-      </div>
+      {!result && (
+        <div className="mt-5 mb-5">
+          <button
+            className="btn btn-lg btn-primary"
+            onClick={calculate}
+            disabled={periods.length === 0}
+          >
+            Xem kết quả
+          </button>
+        </div>
+      )}
+
       {result && (
-        <Result
-          result={result}
-        />
+        <div className="card mt-5">
+          <div className="card-body">
+            <Result
+              result={result}
+            />
+          </div>
+        </div>
       )}
       <ModalInsuranceSalary
         show={showModalSalary}

@@ -29,18 +29,36 @@ function Result({ result }) {
             <td><b>Mbqtl</b></td>
             <td>=</td>
             <td>
-              (Số tháng đóng BHXH x Tiền lương tháng đóng BHXH x Mức điều chỉnh hàng năm)
+              (
+              <span className="badge rounded-pill bg-warning text-dark">Số tháng đóng BHXH</span>
+              {' x '}
+              <span className="badge rounded-pill bg-warning text-dark">Tiền lương tháng đóng BHXH</span>
+              {' x '}
+              <span className="badge rounded-pill bg-warning text-dark">Mức điều chỉnh hàng năm</span>
+              )
               {' : '}
-              Tổng số tháng đóng BHXH
+              <span className="badge rounded-pill bg-warning text-dark">Tổng số tháng đóng BHXH</span>
             </td>
           </tr>
           <tr>
             <td><b>Mức hưởng</b></td>
             <td>=</td>
             <td>
-              (1,5 x Mbqtl x Thời gian đóng BHXH trước năm 2014)
+              (
+              <span className="badge rounded-pill bg-warning text-dark">1.5</span>
+              {' x '}
+              <span className="badge rounded-pill bg-warning text-dark">Mbqtl</span>
+              {' x '}
+              <span className="badge rounded-pill bg-warning text-dark">Số năm đóng BHXH trước 2014</span>
+              )
               {' + '}
-              (2 x Mbqtl x Thời gian đóng BHXH sau năm 2014)
+              (
+              <span className="badge rounded-pill bg-warning text-dark">2</span>
+              {' x '}
+              <span className="badge rounded-pill bg-warning text-dark">Mbqtl</span>
+              {' x '}
+              <span className="badge rounded-pill bg-warning text-dark">Số năm đóng BHXH sau 2014</span>
+              )
             </td>
           </tr>
           </tbody>
@@ -76,15 +94,9 @@ function Result({ result }) {
             <td><b>Mức hưởng</b></td>
             <td>=</td>
             <td>
-              {result.totalYearsBefore2014 > 0 && (
-                `(${1.5} * ${utils.formatNumber(result.adjustedAverageSalary)} * ${result.totalYearsBefore2014})`
-              )}
-              {result.totalYearsBefore2014 > 0 && result.totalYearsFrom2014 > 0 && (
-                ' + '
-              )}
-              {result.totalYearsFrom2014 > 0 && (
-                `(${2} * ${utils.formatNumber(result.adjustedAverageSalary)} * ${result.totalYearsFrom2014})`
-              )}
+              {`(${1.5} * ${utils.formatNumber(result.adjustedAverageSalary)} * ${result.totalYearsBefore2014})`}
+              {' + '}
+              {`(${2} * ${utils.formatNumber(result.adjustedAverageSalary)} * ${result.totalYearsFrom2014})`}
             </td>
             <td>=</td>
             <td>{utils.formatNumber(result.amountWillReceive)}</td>
