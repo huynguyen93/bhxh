@@ -8,17 +8,23 @@ import {
 } from "./constants";
 import utils from "./utils";
 
-const defaultPeriod = {
-  salary: '',
-};
+let periodId = 0;
+
+function createNewPeriod() {
+  return  {
+    salary: '',
+    id: periodId,
+  };
+}
 
 function App() {
-  const [periods, setPeriods] = React.useState([{...defaultPeriod}]);
+  const [periods, setPeriods] = React.useState([{...createNewPeriod()}]);
   const [result, setResult] = React.useState(null);
   const [showModalSalary, setShowModalSalary] = React.useState(false);
 
   const addPeriod = () => {
-    setPeriods([...periods, {...defaultPeriod}]);
+    periodId++;
+    setPeriods([...periods, createNewPeriod()]);
     setResult(null);
   };
 
@@ -99,11 +105,12 @@ function App() {
         <tbody>
           {periods.map((period, index) => {
             const {
+              id,
               salary,
             } = period;
 
             return (
-              <tr key={index}>
+              <tr key={id}>
                 <td>{index + 1}</td>
                 <td>
                   <select
@@ -206,7 +213,7 @@ function App() {
       </ul>
 
       {!result && (
-        <div className="mt-5 mb-5">
+        <div className="mt-5 mb-3">
           <button
             className="btn btn-lg btn-primary"
             onClick={calculate}
