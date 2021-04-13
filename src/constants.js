@@ -7,8 +7,8 @@ export const adjustmentsByYear = {
 export const months = Array(12).fill('').map((_, i) => 'Tháng ' + `${i + 1}`.padStart(2, '0'));
 
 export const years = [];
-const currentYear = new Date().getFullYear();
-const oldestYear = currentYear - 30;
+export const currentYear = new Date().getFullYear();
+export const oldestYear = currentYear - 30;
 for (let year = currentYear; year > oldestYear; year--) {
   years.push(year);
 }

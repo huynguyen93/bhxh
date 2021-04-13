@@ -4,16 +4,46 @@ import ModalInsuranceSalary from './components/ModalInsuranceSalary';
 import Result from './components/Result';
 import {
   months,
-  years
+  years,
 } from "./constants";
 import utils from "./utils";
 
 let periodId = 0;
 
-function createNewPeriod() {
+function createNewPeriod(lastPeriod) {
+  let monthStart = '';
+  let monthEnd = '';
+  let yearStart = '';
+  let yearEnd = '';
+
+  if (lastPeriod) {
+    const lastMonthStart = parseInt(lastPeriod['monthStart']) || false;
+    const lastMonthEnd = parseInt(lastPeriod['monthEnd']) || lastMonthStart || false;
+    const lastYearStart = parseInt(lastPeriod['yearStart']) || false;
+    const lastYearEnd = parseInt(lastPeriod['yearEnd']) || lastYearStart || false;
+
+    if (lastMonthStart && lastMonthEnd) {
+      monthStart = lastMonthEnd === 12 ? 1 : lastMonthEnd + 1;
+      yearStart = lastYearEnd || '';
+      if (monthStart === 1 && yearStart) {
+        yearStart++;
+      }
+
+      monthEnd = monthStart === 12 ? 1 : monthStart + 1;
+      yearEnd = yearStart || '';
+      if (monthEnd === 1 && yearEnd) {
+        yearEnd++;
+      }
+    }
+  }
+
   return  {
     salary: '',
     id: periodId,
+    monthStart,
+    monthEnd,
+    yearStart,
+    yearEnd,
   };
 }
 
@@ -24,7 +54,12 @@ function App() {
 
   const addPeriod = () => {
     periodId++;
-    setPeriods([...periods, createNewPeriod()]);
+    const lastPeriod = periods[periods.length - 1];
+    const newPeriod = createNewPeriod(lastPeriod);
+
+    console.log(newPeriod);
+
+    setPeriods([...periods, newPeriod]);
     setResult(null);
   };
 
@@ -85,6 +120,23 @@ function App() {
     updatePeriod(periodIndex, {salary: formattedSalary, amountPaidForInsurance});
   };
 
+  const fillPeriod = (index) => {
+    const period = periods[index];
+    if (!period) {
+      return;
+    }
+
+    const previousPeriod = periods[index - 1];
+    if (!previousPeriod) {
+      return;
+    }
+
+    updatePeriod(index, {
+      ...createNewPeriod(previousPeriod),
+      ...period,
+    });
+  };
+
   return (
     <div className="App">
       <button className="btn btn-sm btn-link" onClick={() => setShowModalSalary(true)} disabled={showModalSalary}>
@@ -107,6 +159,10 @@ function App() {
             const {
               id,
               salary,
+              monthStart,
+              monthEnd,
+              yearStart,
+              yearEnd,
             } = period;
 
             return (
@@ -116,6 +172,7 @@ function App() {
                   <select
                     className="mr-3"
                     onChange={(e) => updatePeriod(index, {monthStart: e.target.value})}
+                    value={monthStart}
                   >
                     <option>Tháng...</option>
                     {months.map((label, index) => (<option value={index + 1} key={index}>{label}</option>))}
@@ -123,6 +180,7 @@ function App() {
                   <select
                     className=""
                     onChange={(e) => updatePeriod(index, {yearStart: e.target.value})}
+                    value={yearStart}
                   >
                     <option>Năm...</option>
                     {years.map((label) => (<option value={label} key={label}>{label}</option>))}
@@ -132,12 +190,18 @@ function App() {
                   <select
                     className="mr-3"
                     onChange={(e) => updatePeriod(index, {monthEnd: e.target.value})}
+                    value={monthEnd}
                   >
                     <option>Tháng...</option>
                     {months.map((label, index) => (<option value={index + 1} key={index}>{label}</option>))}
                   </select>
                   <select
-                    onChange={(e) => updatePeriod(index, {yearEnd: e.target.value})}
+                    onChange={(e) => {
+                      updatePeriod(index, {yearEnd: e.target.value});
+
+                      // fillPeriod(index + 1);
+                    }}
+                    value={yearEnd}
                   >
                     <option>Năm...</option>
                     {years.map((label) => (<option value={label} key={label}>{label}</option>))}
