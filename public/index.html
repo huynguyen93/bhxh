@@ -38,7 +38,6 @@
   </head>
   <body>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=374157023027041&autoLogAppEvents=1" nonce="ZhgJwa9T"></script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm">
       <p class="h3 my-0 me-md-auto fw-normal">Rút BHXH</p>
@@ -62,7 +61,7 @@
       <hr>
       <div class="mt-4">
         <h5>Bình luận & góp ý</h5>
-        <div class="fb-comments" data-href="https://bhxh.khoahuy.com" data-width="100%" data-numposts="10" style="min-height: 205px">
+        <div id="slickcomment">
           Đang tải...
         </div>
       </div>
@@ -85,4 +84,15 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://slickcomment.com/js/sdk.js"></script>
+  <script>
+    window.SlickComment.renderDiscussion({
+      containerElement: document.getElementById('slickcomment'),
+      locale: 'vi',
+      communityId: 'ES0RtmMek2',
+      pageId: 'bhxh',
+      pageUrl: 'https://bhxh.khoahuy.com',
+      pageTitle: 'BHXH',
+    });
+  </script>
 </html>
