@@ -68,10 +68,10 @@ function calculatePeriods(periods) {
 function calculateTotalYears(totalMonths) {
   const modulo = totalMonths % 12;
   const rawYears = totalMonths / 12;
-  if (modulo === 0) {
+  if (modulo === 0 || modulo === 6) {
     return rawYears;
-  } else if (modulo <= 6) {
-    return Math.round(rawYears) + 0.5
+  } else if (modulo < 6) {
+      return Math.round(rawYears) + 0.5
   } else {
     return Math.ceil(rawYears);
   }
